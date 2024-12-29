@@ -4,7 +4,6 @@ provider "aws" {
 #Creating database
 resource "aws_db_instance" "default" {
   allocated_storage    = 10
-  db_identifier        = "database-1"
   db_name              = "mydb"
   engine               = "mysql"
   engine_version       = "8.0"
