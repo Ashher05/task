@@ -14,6 +14,14 @@ resource "aws_db_instance" "default" {
   skip_final_snapshot  = true
   publicly_accessible  = true
 }
+#Creating ecr repository
+resource "aws_ecr_repository" "my_image_repo" {
+  name = "my-image-repo"          # Name of the repository
+  image_tag_mutability = "MUTABLE"
+  image_scanning_configuration {
+    scan_on_push = true
+  }
+}
 # Define IAM role for Lambda
 resource "aws_iam_role" "lambda_role"{
     name = "lambda_access_role"
