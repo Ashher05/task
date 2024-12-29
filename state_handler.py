@@ -7,7 +7,7 @@ import io
 s3_client = boto3.client('s3')
 
 # RDS Connection Details
-RDS_HOST = 'terraform-terraform-20241229181629346800000001.cx0magceipet.ap-south-1.rds.amazonaws.com'
+RDS_HOST = 'terraform-20241229181629346800000001.cx0magceipet.ap-south-1.rds.amazonaws.com'
 RDS_USER = 'admin'
 RDS_PASSWORD = 'ashher1234'
 RDS_PORT = 3306  # For MySQL, default port is 3306
