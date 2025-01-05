@@ -55,5 +55,6 @@ resource "aws_lambda_function" "my_lambda_funtion" {
   function_name = "ecr-task-function"
   role          = "arn:aws:iam::257220247104:role/lambda_access_role"
   image_uri = "257220247104.dkr.ecr.ap-south-1.amazonaws.com/my-image-repo:latest"
+  runtime = "provided.al2"
   package_type = "Image"
 }
