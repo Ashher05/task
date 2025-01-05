@@ -54,7 +54,6 @@ resource "aws_iam_role_policy_attachment" "vpc_access_policy" {
 resource "aws_lambda_function" "my_lambda_funtion" {
   function_name = "ecr-task-function"
   role          = "arn:aws:iam::257220247104:role/lambda_access_role"
-  runtime = "provided.al2"    #Use "provideral2" for custom runtime like Docker
   image_uri = "257220247104.dkr.ecr.ap-south-1.amazonaws.com/my-image-repo:latest"
   package_type = "Image"
 }
